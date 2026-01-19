@@ -36,7 +36,7 @@ import java.util.*;
 public final class DynamicLightingEngine implements CellHasher {
 	private static final Logger LOGGER = LogUtils.getLogger();
 
-	public static final double MAX_RADIUS = 7.75;
+	public static final double MAX_RADIUS = 15.0;
 	public static final double MAX_RADIUS_SQUARED = MAX_RADIUS * MAX_RADIUS;
 	public static final int CELL_SIZE = Mth.ceil(MAX_RADIUS);
 	public static final int DEFAULT_LIGHT_SOURCES = 1024;
