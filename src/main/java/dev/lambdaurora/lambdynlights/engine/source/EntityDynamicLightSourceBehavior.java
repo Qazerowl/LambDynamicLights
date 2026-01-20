@@ -115,7 +115,7 @@ public interface EntityDynamicLightSourceBehavior extends EntityDynamicLightSour
 			DynamicLightSource.gatherClosestChunks(x, y, z, newPos::add);
 		}
 
-		var result = new Long2ObjectArrayMap<ChunkRebuildStatus>(8);
+		var result = new Long2ObjectArrayMap<ChunkRebuildStatus>(27);
 		this.lambdynlights$getTrackedLitChunkPos().forEach(chunk -> {
 			result.put(chunk, ChunkRebuildStatus.REMOVE_REQUESTED);
 		});

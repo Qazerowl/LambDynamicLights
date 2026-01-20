@@ -65,25 +65,61 @@ public interface DynamicLightSource {
 				SectionPos.blockToSectionCoord(y),
 				SectionPos.blockToSectionCoord(z)
 		);
-
+			
+		chunkPos.move(Direction.WEST);
 		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
-
-		var directionX = (Mth.floor(x) & 15) >= 8 ? Direction.EAST : Direction.WEST;
-		var directionY = (Mth.floor(y) & 15) >= 8 ? Direction.UP : Direction.DOWN;
-		var directionZ = (Mth.floor(z) & 15) >= 8 ? Direction.SOUTH : Direction.NORTH;
-
-		for (int i = 0; i < 7; i++) {
-			if (i % 4 == 0) {
-				chunkPos.move(directionX); // X
-			} else if (i % 4 == 1) {
-				chunkPos.move(directionZ); // XZ
-			} else if (i % 4 == 2) {
-				chunkPos.move(directionX.getOpposite()); // Z
-			} else {
-				chunkPos.move(directionZ.getOpposite()); // origin
-				chunkPos.move(directionY); // Y
-			}
-			chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.NORTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.EAST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.EAST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.SOUTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.SOUTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.WEST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.WEST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.UP);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.NORTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.NORTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.EAST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.EAST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.SOUTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.SOUTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.WEST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.NORTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.DOWN);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.DOWN);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.WEST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.NORTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.EAST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.EAST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.SOUTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.SOUTH);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.WEST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
+		chunkPos.move(Direction.WEST);
+		chunkConsumer.accept(SectionPos.asLong(chunkPos.getX(), chunkPos.getY(), chunkPos.getZ()));
 		}
 	}
 }
