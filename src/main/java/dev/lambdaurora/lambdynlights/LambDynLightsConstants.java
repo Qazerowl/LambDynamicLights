@@ -50,6 +50,6 @@ public final class LambDynLightsConstants {
 	 * {@return {@code true} if this mod is in development mode, or {@code false} otherwise}
 	 */
 	public static boolean isDevMode() {
-		return VERSION.endsWith("-local");
+		return false;
 	}
 }
